@@ -1,6 +1,7 @@
 /* background */
+/* main-box */
 /* number view */
-/* box */
+/* key-box */
 * {
   margin: 0;
   padding: 0;
@@ -52,6 +53,12 @@ body {
   height: calc(100% - 80px);
   margin: 0 10px;
 }
+.box .keys .tt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
 .box .keys #t1 {
   border: 1px solid black;
   width: calc(100% - 10px);
@@ -59,10 +66,11 @@ body {
   margin: 10px 5px;
 }
 .box .keys #t2 {
-  width: 70%;
+  width: 75%;
+  max-width: 350px;
   margin: 10px 5px;
   margin-top: 0;
-  height: calc(100% - 100px);
+  height: calc(100% - 85px);
 }
 .box .keys #t2 li {
   display: flex;
@@ -70,21 +78,47 @@ body {
   align-items: center;
   flex-direction: row;
   width: calc(100% - 4px);
-  height: calc(25% - 2px);
+  height: calc(25% - 5px);
 }
 .box .keys #t2 li div {
+  font-size: xx-large;
+  font-family: system-ui;
   width: 33.3%;
-  height: 100%;
+  height: calc(100% - 5px);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2px;
+  margin-top: 5px;
   margin-right: 2px;
-  background: green;
+  background: #dae9ed;
   border-radius: 5px;
 }
 .box .keys #t2 #r0 div {
   width: 100%;
+}
+.box .keys #t3 {
+  width: calc(20% - 10px);
+  max-width: 70px;
+  height: calc(100% - 185px);
+  margin-top: 5px;
+  position: absolute;
+  right: 20px;
+}
+.box .keys #t3 li {
+  font-size: xx-large;
+  font-family: system-ui;
+  background: #dae9ed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: calc(25% - 5px);
+  margin-bottom: 5px;
+}
+.box .keys #t3 #equal {
+  height: calc(50% - 5px);
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
