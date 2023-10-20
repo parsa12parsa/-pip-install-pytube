@@ -3,7 +3,7 @@
   padding: 0;
   border: none;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 20px;
   overflow: hidden;
   transition: 0.25s linear;
 }
@@ -22,13 +22,25 @@ body {
 
 .box {
   background: rgba(12, 26, 219, 0.4352941176); /* box */
-  border-radius: 20px;
   position: absolute;
   top: 10%;
   min-width: 350px;
   max-width: 600px;
   height: 500px;
   width: 40%;
+}
+.box .view {
+  background: white; /* number view */
+  width: calc(100% - 20px);
+  height: 50px;
+  margin: 10px 10px;
+  font-size: xx-large;
+  border-radius: 10px;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  direction: rtl;
+  font-family: system-ui;
 }
 
 /*# sourceMappingURL=style.css.map */
