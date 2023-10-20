@@ -1,3 +1,8 @@
+$background: #7dd0bd; /* background */
+$box: #3742e27b;
+$output: rgba(255, 255, 255, 0.968); /* number view */
+$keys: #57b7d1; /* box */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +18,7 @@ html {
 }
 
 body {
-    background: #7dd0bd; /* background */
+    background: $background;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +26,7 @@ body {
 }
 
 .box {
-    background: #0c1adb6f; /* box */
+    background: $box;
     position: absolute;
     top: 10%;
     min-width: calc(350px);
@@ -30,7 +35,7 @@ body {
     width: 40%;
 
     .view {
-        background: white; /* number view */
+        background: $output;
         width: calc(100% - 20px);
         height: 50px;
         margin: 10px 10px;
@@ -41,5 +46,12 @@ body {
         align-items: center;
         direction: rtl;
         font-family: system-ui;
+    }
+
+    .keys {
+        background: $keys;
+        width: calc(100% - 20px);
+        height: calc(100% - 80px);
+        margin: 0 10px;
     }
 }

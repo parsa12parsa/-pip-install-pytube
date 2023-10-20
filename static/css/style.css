@@ -1,3 +1,6 @@
+/* background */
+/* number view */
+/* box */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +16,7 @@ html {
 }
 
 body {
-  background: #7dd0bd; /* background */
+  background: #7dd0bd;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +24,7 @@ body {
 }
 
 .box {
-  background: rgba(12, 26, 219, 0.4352941176); /* box */
+  background: rgba(55, 66, 226, 0.4823529412);
   position: absolute;
   top: 10%;
   min-width: 350px;
@@ -30,7 +33,7 @@ body {
   width: 40%;
 }
 .box .view {
-  background: white; /* number view */
+  background: rgba(255, 255, 255, 0.968);
   width: calc(100% - 20px);
   height: 50px;
   margin: 10px 10px;
@@ -41,6 +44,12 @@ body {
   align-items: center;
   direction: rtl;
   font-family: system-ui;
+}
+.box .keys {
+  background: #57b7d1;
+  width: calc(100% - 20px);
+  height: calc(100% - 80px);
+  margin: 0 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
