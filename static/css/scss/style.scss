@@ -48,6 +48,10 @@ body {
         align-items: center;
         direction: rtl;
         font-family: system-ui;
+
+        #box {
+            height: 100%;
+        }
     }
 
     .keys {
@@ -55,6 +59,9 @@ body {
         width: calc(100% - 20px);
         height: calc(100% - 80px);
         margin: 0 10px;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
 
         .tt {
             width: 100%;
@@ -104,8 +111,19 @@ body {
                 }
             }
 
-            #r0 div {
-                width: calc(100% - 14px);
+            #r0 {
+                padding: 0 5px;
+                div {
+                    &:first-child {
+                        width: calc(33.3% - 2px);
+                        margin-right: 3px;
+                        color: red;
+                    }
+
+                    &:last-child {
+                        width: 66.6%;
+                    }
+                }
             }
         }
 
