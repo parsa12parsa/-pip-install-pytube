@@ -83,18 +83,21 @@ body {
 .box .keys #t2 li div {
   font-size: xx-large;
   font-family: system-ui;
-  width: 33.3%;
+  width: calc(33.3% - 6px);
   height: calc(100% - 5px);
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 5px;
-  margin-right: 2px;
+  margin-right: 3px;
   background: #dae9ed;
   border-radius: 5px;
 }
+.box .keys #t2 li:last-child {
+  margin-right: 0;
+}
 .box .keys #t2 #r0 div {
-  width: 100%;
+  width: calc(100% - 14px);
 }
 .box .keys #t3 {
   width: calc(20% - 10px);

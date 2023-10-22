@@ -88,20 +88,24 @@ body {
                 div {
                     font-size: xx-large;
                     font-family: system-ui;
-                    width: 33.3%;
+                    width: calc(33.3% - 6px);
                     height: calc(100% - 5px);
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     margin-top: 5px;
-                    margin-right: 2px;
+                    margin-right: 3px;
                     background: $keys;
                     border-radius: 5px;
+                }
+
+                &:last-child {
+                    margin-right: 0;
                 }
             }
 
             #r0 div {
-                width: 100%;
+                width: calc(100% - 14px);
             }
         }
 
