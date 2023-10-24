@@ -11,7 +11,14 @@ def loadMain():
 
 @app.route('/', methods=['POST'])
 def calculator():
-    input_json = request.get_json(force=True)
-    print(f'data from client: {input_json}')
-    dictToReturn = {'ok': True}
-    return jsonify(dictToReturn)
+    input_json = request.get_json(force=True)['calculate']
+
+    match input_json['type']:
+        case 'plus':
+            return jsonify({
+                'resault': input_json['number_1'] + input_json['number_2']
+            })
+        case 'minus':
+            return jsonify({
+                'resault': input_json['number_1'] - input_json['number_2']
+            })

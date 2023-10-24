@@ -51,6 +51,7 @@ body {
 
         #box {
             height: 100%;
+            direction: ltr;
         }
     }
 
@@ -62,6 +63,13 @@ body {
         -webkit-user-select: none; /* Safari */
         -ms-user-select: none; /* IE 10 and IE 11 */
         user-select: none; /* Standard syntax */
+
+        %hover {
+            &:hover {
+                scale: .98;
+                box-shadow: 0 0 3px .25px black;
+            }
+        }
 
         .tt {
             width: 100%;
@@ -75,6 +83,10 @@ body {
             width: calc(100% - 10px);
             height: 70px;
             margin: 10px 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 5px;
         }
 
         #t2 {
@@ -100,10 +112,10 @@ body {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    margin-top: 5px;
                     margin-right: 3px;
                     background: $keys;
                     border-radius: 5px;
+                    @extend %hover;
                 }
 
                 &:last-child {
@@ -146,6 +158,7 @@ body {
                 width: 100%;
                 height: calc(25% - 5px);
                 margin-bottom: 5px;
+                @extend %hover;
             }
 
             #equal {
