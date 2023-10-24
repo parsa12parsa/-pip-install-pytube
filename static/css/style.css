@@ -75,6 +75,10 @@ body {
   width: calc(100% - 10px);
   height: 70px;
   margin: 10px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5px;
 }
 .box .keys #t2 {
   width: 75%;
