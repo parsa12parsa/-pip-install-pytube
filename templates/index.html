@@ -4,15 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>یوتیوب دانلودر</title>
+    <title>ماشین حساب</title>
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
 </head>
 
 <body>
     <div class="box">
-        <div class="view">0</div>
+        <div class="view">
+            <div id="box">0</div>
+        </div>
         <div class="keys">
-            <ul id="t1"></ul>
+            <ul id="t1">
+                <li id="multiple" att="multiple">*</li>
+                <li id="divide" att="divide">/</li>
+                <li id="power_2" att="power_2">x&#178;</li>
+                <li id="radical" att="radical">&#8730;x</li>
+            </ul>
             <div class="tt">
                 <ul id="t2">
                     <li>
@@ -31,13 +38,14 @@
                         <div>3</div>
                     </li>
                     <li id="r0">
+                        <div><b>C</b></div>
                         <div>0</div>
                     </li>
                 </ul>
                 <ul id="t3">
-                    <li id="plus">+</li>
-                    <li id="minus">-</li>
-                    <li id="equal">=</li>
+                    <li id="plus" att="plus">+</li>
+                    <li id="minus" att="minus">-</li>
+                    <li id="equal" att="equal">=</li>
                 </ul>
             </div>
         </div>

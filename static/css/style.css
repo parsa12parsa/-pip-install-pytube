@@ -47,11 +47,22 @@ body {
   direction: rtl;
   font-family: system-ui;
 }
+.box .view #box {
+  height: 100%;
+  direction: ltr;
+}
 .box .keys {
   background: #57b7d1;
   width: calc(100% - 20px);
   height: calc(100% - 80px);
   margin: 0 10px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.box .keys #t3 li:hover, .box .keys #t2 li div:hover {
+  scale: 0.98;
+  box-shadow: 0 0 3px 0.25px black;
 }
 .box .keys .tt {
   width: 100%;
@@ -64,6 +75,10 @@ body {
   width: calc(100% - 10px);
   height: 70px;
   margin: 10px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5px;
 }
 .box .keys #t2 {
   width: 75%;
@@ -83,18 +98,28 @@ body {
 .box .keys #t2 li div {
   font-size: xx-large;
   font-family: system-ui;
-  width: 33.3%;
+  width: calc(33.3% - 6px);
   height: calc(100% - 5px);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5px;
-  margin-right: 2px;
+  margin-right: 3px;
   background: #dae9ed;
   border-radius: 5px;
 }
-.box .keys #t2 #r0 div {
-  width: 100%;
+.box .keys #t2 li:last-child {
+  margin-right: 0;
+}
+.box .keys #t2 #r0 {
+  padding: 0 5px;
+}
+.box .keys #t2 #r0 div:first-child {
+  width: calc(33.3% - 2px);
+  margin-right: 3px;
+  color: red;
+}
+.box .keys #t2 #r0 div:last-child {
+  width: 66.6%;
 }
 .box .keys #t3 {
   width: calc(20% - 10px);
