@@ -62,11 +62,12 @@ async function change_step(s) {
             view.innerHTML = '0';
         } else if (s = 'equal') {
             memory.num2 = view.innerHTML;
-            let i = await fetch('/', {
+
+            await fetch('/', {
                 method: "POST",
-                credentials: "same-origin",
                 headers: {
-                    "Content-Type": "application/json"
+                    Accept: 'application.json',
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
                     calculate: {
@@ -75,8 +76,15 @@ async function change_step(s) {
                         number_2: Number(memory.num2)
                     }
                 })
-            }).text();
-            console.log(i);
+            }).then(response => {
+                response.json().then(v => {
+                    view.innerHTML = v.resault;
+                    memory.num1 = v.resault;
+                    memory.num2 = null;
+                });
+            });
+
+            step = 'none';
         }
     }
 }
