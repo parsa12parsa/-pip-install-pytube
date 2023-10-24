@@ -49,6 +49,7 @@ body {
 }
 .box .view #box {
   height: 100%;
+  direction: ltr;
 }
 .box .keys {
   background: #57b7d1;
