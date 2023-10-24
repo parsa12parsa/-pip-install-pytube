@@ -59,6 +59,10 @@ body {
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
+.box .keys #t3 li:hover, .box .keys #t2 li div:hover {
+  scale: 0.98;
+  box-shadow: 0 0 3px 0.25px black;
+}
 .box .keys .tt {
   width: 100%;
   height: 100%;
@@ -94,7 +98,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5px;
   margin-right: 3px;
   background: #dae9ed;
   border-radius: 5px;

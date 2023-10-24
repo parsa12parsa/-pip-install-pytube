@@ -13,6 +13,11 @@ document.querySelector('body').addEventListener('keydown', c => {
     }
     else if (c.key == 'c' || c.key == 'C') {
         view.innerHTML = 0;
+        step = 'none';
+        memory = {
+            num1: null,
+            num2: null
+        }
     }
     else if (['-', '+', '=', 'Enter'].includes(c.key)) {
         change_step(c.key.replace('+', 'plus').replace('-', 'minus').replace('Enter', 'equal').replace('=', 'equal'));
@@ -26,6 +31,11 @@ document.querySelectorAll('#t2 li div').forEach(i => {
 
         if (content == '<b>C</b>' || content == 'C') {
             view.innerHTML = 0;
+            step = 'none';
+            memory = {
+                num1: null,
+                num2: null
+            }
         }
 
         input_view(content);
@@ -43,14 +53,7 @@ document.querySelectorAll('#t3 li').forEach(i => {
 
 function input_view(num) {
     if (num in [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) {
-        // switch (step) {
-        //     case 'none':
         view.innerHTML += num;
-        //         break;
-        //     default:
-        //         view.innerHTML += num;
-        //         break;
-        // }
     }
 }
 
