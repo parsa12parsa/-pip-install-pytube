@@ -18,7 +18,7 @@ def calculator():
             return jsonify({
                 'resault': input_json['number_1'] + input_json['number_2']
             })
-        case 'minus':
+        case 'radical':
             return jsonify({
-                'resault': input_json['number_1'] - input_json['number_2']
+                'resault': input_json['number_1'] ** 0.5
             })
