@@ -78,9 +78,7 @@ document.querySelectorAll('#t1 li').forEach(i => {
                     }
                 });
             }
-        }
-
-        if (content == 'power_2') {
+        } else if (content == 'power_2') {
             if (step == 'none') {
                 fetch('/', {
                     method: "POST",
@@ -112,6 +110,10 @@ document.querySelectorAll('#t1 li').forEach(i => {
                     }
                 });
             }
+        } else {
+            let content = c.target.getAttribute('att');
+
+            change_step(content);
         }
     })
 });
