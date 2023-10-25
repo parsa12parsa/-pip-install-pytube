@@ -60,7 +60,7 @@ body {
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
-.box .keys #t3 li:hover, .box .keys #t2 li div:hover {
+.box .keys #t3 li:hover, .box .keys #t2 li div:hover, .box .keys #t1 li:hover {
   scale: 0.98;
   box-shadow: 0 0 3px 0.25px black;
 }
@@ -71,14 +71,22 @@ body {
   flex-direction: row;
 }
 .box .keys #t1 {
-  border: 1px solid black;
-  width: calc(100% - 10px);
+  width: calc(100% - 19px);
   height: 70px;
-  margin: 10px 5px;
+  margin: 12.5px 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 5px;
+}
+.box .keys #t1 li {
+  background: #dae9ed;
+  width: calc(100% - 3px);
+  margin-right: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  font-family: system-ui;
 }
 .box .keys #t2 {
   width: 75%;

@@ -42,6 +42,82 @@ document.querySelectorAll('#t2 li div').forEach(i => {
     })
 });
 
+document.querySelectorAll('#t1 li').forEach(i => {
+    i.addEventListener('click', c => {
+        let content = c.target.getAttribute('att');
+
+        if (content == 'radical') {
+            if (step == 'none') {
+                fetch('/', {
+                    method: "POST",
+                    headers: {
+                        Accept: 'application.json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        calculate: {
+                            type: 'radical',
+                            number_1: Number(view.innerHTML)
+                        }
+                    })
+                }).then(response => {
+                    response.json().then(v => {
+                        view.innerHTML = v.resault;
+                        memory.num1 = v.resault;
+                        memory.num2 = null;
+                    });
+                });
+            } else {
+                view.innerHTML = 'ERROR';
+                sleep(1, function () {
+                    view.innerHTML = 0;
+                    step = 'none';
+                    memory = {
+                        num1: null,
+                        num2: null
+                    }
+                });
+            }
+        } else if (content == 'power_2') {
+            if (step == 'none') {
+                fetch('/', {
+                    method: "POST",
+                    headers: {
+                        Accept: 'application.json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        calculate: {
+                            type: 'power_2',
+                            number_1: Number(view.innerHTML)
+                        }
+                    })
+                }).then(response => {
+                    response.json().then(v => {
+                        view.innerHTML = v.resault;
+                        memory.num1 = v.resault;
+                        memory.num2 = null;
+                    });
+                });
+            } else {
+                view.innerHTML = 'ERROR';
+                sleep(1, function () {
+                    view.innerHTML = 0;
+                    step = 'none';
+                    memory = {
+                        num1: null,
+                        num2: null
+                    }
+                });
+            }
+        } else {
+            let content = c.target.getAttribute('att');
+
+            change_step(content);
+        }
+    })
+});
+
 document.querySelectorAll('#t3 li').forEach(i => {
     i.addEventListener('click', c => {
         let content = c.target.getAttribute('att');
@@ -57,8 +133,14 @@ function input_view(num) {
     }
 }
 
+function sleep(second, func) {
+    return new Promise(resolve => {
+        setTimeout(resolve, second * 1000)
+    }).then(func);
+}
+
 async function change_step(s) {
-    if (['plus', 'minus', 'equal'].includes(s)) {
+    if (['plus', 'minus', 'equal', 'multiple', 'divide', 'power_2', 'radical'].includes(s)) {
         if (step == 'none') {
             step = s;
             memory.num1 = view.innerHTML;
