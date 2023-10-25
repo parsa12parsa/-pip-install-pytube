@@ -66,8 +66,8 @@ body {
 
         %hover {
             &:hover {
-                scale: .98;
-                box-shadow: 0 0 3px .25px black;
+                scale: 0.98;
+                box-shadow: 0 0 3px 0.25px black;
             }
         }
 
@@ -79,14 +79,24 @@ body {
         }
 
         #t1 {
-            border: 1px solid black; //d
-            width: calc(100% - 10px);
+            width: calc(100% - 19px);
             height: 70px;
-            margin: 10px 5px;
+            margin: 12.5px 5px;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            padding: 5px;
+
+            li {
+                background: $keys;
+                width: calc(100% - 3px);
+                margin-right: 3px;
+                @extend %hover;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: xx-large;
+                font-family: system-ui;
+            }
         }
 
         #t2 {
