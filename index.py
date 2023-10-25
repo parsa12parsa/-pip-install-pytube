@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, url_for, jsonify
 from flask import render_template
+import webbrowser
 
 app = Flask(__name__)
 
@@ -21,3 +22,6 @@ def calculator():
             return jsonify({
                 'resault': input_json['number_1'] ** 0.5
             })
+
+
+webbrowser.open_new("http://127.0.0.1:5000")
